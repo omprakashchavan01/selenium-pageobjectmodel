@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" thread-count="2" parallel="tests">
+<!--    <test name="Chrome" thread-count="2" parallel="methods">
+        <parameter name="browser" value="CHROME"/>
+        <classes>
+            <class name="org.selenium.pom.tests.MyFirstTestCase" />
+        </classes>
+    </test>-->
+    <test name="Firefox" thread-count="2" parallel="methods">
+        <parameter name="browser"  value="FIREFOX"/>
+        <classes>
+            <class name="org.selenium.pom.tests.MyFirstTestCase" />
+        </classes>
+    </test>
+</suite>
