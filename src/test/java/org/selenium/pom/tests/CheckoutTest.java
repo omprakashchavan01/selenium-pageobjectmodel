@@ -1,5 +1,6 @@
 package org.selenium.pom.tests;
 
+import io.restassured.http.Cookies;
 import org.selenium.pom.api.actions.CartApi;
 import org.selenium.pom.api.actions.SignUpApi;
 import org.selenium.pom.base.BaseTest;
@@ -21,7 +22,7 @@ public class CheckoutTest extends BaseTest {
         BillingAddress billingAddress = JacksonUtils.deserializeJson("myBillingAddress.json", BillingAddress.class);
         CheckoutPage checkoutPage = new CheckoutPage(getDriver()).load();
 
-        CartApi cartApi = new CartApi();
+        CartApi cartApi = new CartApi(new Cookies());
         cartApi.addToCart(1215, 1);
         injectCookiesToBrowser(cartApi.getCookies());
 

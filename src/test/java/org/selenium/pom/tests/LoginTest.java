@@ -1,5 +1,6 @@
 package org.selenium.pom.tests;
 
+import io.restassured.http.Cookies;
 import org.selenium.pom.api.actions.CartApi;
 import org.selenium.pom.api.actions.SignUpApi;
 import org.selenium.pom.base.BaseTest;
@@ -22,7 +23,7 @@ public class LoginTest extends BaseTest {
 
         SignUpApi signUpApi = new SignUpApi();
         signUpApi.register(user);
-        CartApi cartApi = new CartApi();
+        CartApi cartApi = new CartApi(new Cookies());
         Product product = new Product(1215);
         cartApi.addToCart(product.getId(), 1);
 
