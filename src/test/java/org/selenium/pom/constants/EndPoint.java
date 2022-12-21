@@ -4,7 +4,8 @@ public enum EndPoint {
     STORE("/store"),
     ACCOUNT("/account"),
     ADD_TO_CART("/?wc-ajax=add_to_cart"),
-    CHECKOUT("/checkout");
+    CHECKOUT("/checkout"),
+    ACCOUNT_EDIT_BILLING_ADDRESS("/account/edit-address/billing/");
 
     public final String url;
 

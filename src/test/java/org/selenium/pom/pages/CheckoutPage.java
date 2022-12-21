@@ -29,6 +29,7 @@ public class CheckoutPage extends BasePage {
     private final By alternateStateDropDown = By.id("select2-billing_state-container");
 
     private final By directBankTransferRadioBtn = By.id("payment_method_bacs");
+    private final By cashOnDeliveryTransferRadioBtn = By.id("payment_method_cod");
 
     private final By productName = By.cssSelector("td[class='product-name']");
 
@@ -162,6 +163,11 @@ public class CheckoutPage extends BasePage {
         if(!e.isSelected()){
             e.click();
         }
+        return this;
+    }
+
+    public CheckoutPage selectCashOnDeliveryTransfer(){
+        wait.until(ExpectedConditions.elementToBeClickable(cashOnDeliveryTransferRadioBtn)).click();
         return this;
     }
 

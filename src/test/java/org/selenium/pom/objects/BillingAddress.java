@@ -9,6 +9,24 @@ public class BillingAddress {
     private String email;
     private String country;
     private String state;
+    private String company;
+    private String phone;
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
 
     public String getCountry() {
         return country;

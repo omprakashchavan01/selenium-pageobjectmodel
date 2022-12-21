@@ -5,6 +5,7 @@ import org.selenium.pom.dataproviders.MyDataProvider;
 import org.selenium.pom.objects.Product;
 import org.selenium.pom.pages.CartPage;
 import org.selenium.pom.pages.HomePage;
+import org.selenium.pom.pages.ProductPage;
 import org.selenium.pom.pages.StorePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -29,5 +30,15 @@ public class AddToCartTest extends BaseTest {
                 clickAddToCartBtn(product.getName()).
                 clickViewCart();
         Assert.assertEquals(cartPage.getProductName(), product.getName());
+    }
+
+    @Test()
+    public void AddToCartFromProductPage() throws IOException {
+        Product product = new Product(1215);
+        String productNameSeparatedByDash = product.getName().toLowerCase().replaceAll(" ", "-");
+
+        ProductPage productPage = new ProductPage(getDriver()).loadProduct(productNameSeparatedByDash).
+                addToCart();
+        Assert.assertTrue(productPage.getAlert().contains("“" + product.getName() +"” has been added to your cart."));
     }
 }
