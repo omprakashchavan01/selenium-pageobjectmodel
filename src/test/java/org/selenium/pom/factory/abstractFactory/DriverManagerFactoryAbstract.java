@@ -1,9 +1,6 @@
 package org.selenium.pom.factory.abstractFactory;
 
 import org.selenium.pom.constants.DriverType;
-import org.selenium.pom.factory.ChromeDriverManager;
-import org.selenium.pom.factory.DriverManager;
-import org.selenium.pom.factory.FirefoxDriverManager;
 
 public class DriverManagerFactoryAbstract {
 

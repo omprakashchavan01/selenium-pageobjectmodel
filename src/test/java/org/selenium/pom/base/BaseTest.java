@@ -7,7 +7,6 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.selenium.pom.constants.DriverType;
-import org.selenium.pom.factory.DriverManagerFactory;
 import org.selenium.pom.factory.abstractFactory.DriverManagerAbstract;
 import org.selenium.pom.factory.abstractFactory.DriverManagerFactoryAbstract;
 import org.selenium.pom.utils.CookieUtils;
