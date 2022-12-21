@@ -1,6 +1,5 @@
 package org.selenium.pom.tests;
 
-import org.openqa.selenium.WebDriver;
 import org.selenium.pom.base.BaseTest;
 import org.selenium.pom.dataproviders.MyDataProvider;
 import org.selenium.pom.objects.Product;
