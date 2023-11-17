@@ -54,7 +54,7 @@ public class BaseTest {
         setDriverManager(DriverManagerFactoryAbstract.
                 getManager(DriverType.valueOf(browser)));
         setDriver(getDriverManager().getDriver());
-        System.out.println("CURRENT THREAD: " + Thread.currentThread().getId() + ", " +
+        System.out.println("CURRENT THREAD: " + Thread.currentThread().threadId() + ", " +
                 "DRIVER = " + getDriver());
     }
 
@@ -62,7 +62,7 @@ public class BaseTest {
     @AfterMethod
     public synchronized void quitDriver(@Optional String browser, ITestResult result) throws InterruptedException, IOException {
         Thread.sleep(300);
-        System.out.println("CURRENT THREAD: " + Thread.currentThread().getId() + ", " +
+        System.out.println("CURRENT THREAD: " + Thread.currentThread().threadId() + ", " +
                 "DRIVER = " + getDriver());
 //        getDriver().quit();
         if(result.getStatus() == ITestResult.FAILURE){
