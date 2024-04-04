@@ -5,7 +5,7 @@
 Enroll today at the minimal rate of INR 570/ $12.99.
 Link with coupon code: https://www.udemy.com/course/selenium-java-test-framework/?couponCode=DEC021**
 
-![Udemy_Landing_Page](/CourseLandingPage.PNG)
+![Udemy_Landing_Page](/CourseLandingPage.png)
 
 Technologies/Tools used in building the framework
 =================================================
